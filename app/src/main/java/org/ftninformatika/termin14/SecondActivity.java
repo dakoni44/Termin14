@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import org.ftninformatika.termin14.model.Fruit;
@@ -39,5 +40,9 @@ public class SecondActivity extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
+
+        RatingBar rb=findViewById(R.id.ratingBar);
+        rb.setIsIndicator(true);
+        rb.setRating(fruit.getRating());
     }
 }

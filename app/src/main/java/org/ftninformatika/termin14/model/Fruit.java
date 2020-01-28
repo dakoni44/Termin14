@@ -3,20 +3,23 @@ package org.ftninformatika.termin14.model;
 public class Fruit {
 
     public static Fruit[] fruits= {
-            new Fruit(0,"limun", "kiseo je", "lemmon.jpg"),
-            new Fruit(1, "pomorandza", "ukusna je", "orange.jpg"),
-            new Fruit(2, "grejpfrut", "gorko je", "grapefruit.jpg")};
+            new Fruit(0,"limun", "kiseo je", "lemmon.jpg",1),
+            new Fruit(1, "pomorandza", "ukusna je", "orange.jpg",5),
+            new Fruit(2, "grejpfrut", "gorko je", "grapefruit.jpg",3.5f)};
 
     private int id;
     private String name;
     private String description;
     private String imageFileName;
+    private float rating;
 
-    public Fruit(int id, String name, String description, String imageFileName) {
+
+    public Fruit(int id, String name, String description, String imageFileName, float rating) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.imageFileName = imageFileName;
+        this.rating = rating;
     }
 
     public int getId() {
@@ -49,6 +52,14 @@ public class Fruit {
 
     public void setImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 
 
